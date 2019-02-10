@@ -23,16 +23,3 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
-  - changeSet:
-      id: 2
-      author: marceloverdijk
-      changes:
-        - insert:
-            tableName: person
-            columns:
-              - column:
-                  name: firstName
-                  value: Marcel
-              - column:
-                  name: lastName
-                  value: Overdijk
