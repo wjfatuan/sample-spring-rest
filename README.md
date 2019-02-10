@@ -1,25 +1,10 @@
-:spring_version: current
-:spring_data_rest: current
-:spring_data_jpa: current
-:spring_data_commons: current
-:spring_boot_version: 2.0.5.RELEASE
-:Controller: http://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/stereotype/Controller.html
-:DispatcherServlet: http://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/servlet/DispatcherServlet.html
-:SpringApplication: http://docs.spring.io/spring-boot/docs/{spring_boot_version}/api/org/springframework/boot/SpringApplication.html
-:ResponseBody: http://docs.spring.io/spring/docs/{spring_version}/javadoc-api/org/springframework/web/bind/annotation/ResponseBody.html
-:toc:
-:icons: font
-:source-highlighter: prettify
-:project_id: gs-accessing-data-rest
-
-
-== What you'll build
+## What you'll build
 
 You'll build a Spring application that let's you create and retrieve `Person` objects stored in a database using Spring Data REST. Spring Data REST takes the features of http://projects.spring.io/spring-hateoas[Spring HATEOAS] and http://projects.spring.io/spring-data-jpa[Spring Data JPA] and combines them together automatically.
 
 NOTE: Spring Data REST also supports link:/guides/gs/accessing-neo4j-data-rest[Spring Data Neo4j], link:/guides/gs/accessing-gemfire-data-rest[Spring Data Gemfire] and link:/guides/gs/accessing-mongodb-data-rest[Spring Data MongoDB] as backend data stores, but those are not part of this guide.
 
-== What you'll need
+## What you'll need
 
 :java_version: 1.8
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
@@ -36,13 +21,13 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 
 
 [[initial]]
-== Create a domain object
+## Create a domain object
 
 Create a new domain object to present a person.
 
 The `Person` has a first name and a last name. There is also an id object that is configured to be automatically generated so you don't have to deal with that.
 
-== Create a Person repository
+## Create a Person repository
 
 Next you need to create a simple repository.
 
@@ -54,7 +39,7 @@ NOTE: `@RepositoryRestResource` is not required for a repository to be exported.
 
 Here you have also defined a custom query to retrieve a list of `Person` objects based on the lastName. You'll see how to invoke it further down in this guide.
 
-== Make the application executable
+## Make the application executable
 
 Although it is possible to package this service as a traditional link:/understanding/WAR[WAR] file for deployment to an external application server, the simpler approach demonstrated below creates a standalone application. You package everything in a single, executable JAR file, driven by a good old Java `main()` method. Along the way, you use Spring's support for embedding the link:/understanding/Tomcat[Tomcat] servlet container as the HTTP runtime, instead of deploying to an external instance.
 
@@ -73,7 +58,7 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 Logging output is displayed. The service should be up and running within a few seconds.
 
 
-== Test the application
+## Test the application
 
 Now that the application is running, you can test it. You can use any REST client you wish. The following examples use the *nix tool `curl`.
 
