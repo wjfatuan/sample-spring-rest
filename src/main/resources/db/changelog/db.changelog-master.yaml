@@ -31,8 +31,8 @@ databaseChangeLog:
             tableName: person
             columns:
               - column:
-                  name: first_name
+                  name: firstName
                   value: Marcel
               - column:
-                  name: last_name
+                  name: lastName
                   value: Overdijk
