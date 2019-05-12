@@ -1,3 +1,5 @@
+package co.edu.uan.app.rest;
+
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.orm.jpa.*;
 import co.edu.uan.rest.PersonRepository;
@@ -15,5 +17,14 @@ public class PersonRepositoryIntegrationTest {
     private PersonRepository employeeRepository;
  
     // write test cases here
+
+    public Object deleteThis() {
+        if(entityManager==null) {
+            return employeeRepository;
+        }
+        else {
+            return entityManager;
+        }
+    }
  
 }
