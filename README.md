@@ -1,5 +1,7 @@
 # Sample RESTful API with Spring 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/22cb690e8826461ebd10c3adb82a50c2)](https://app.codacy.com/app/wilson.forero/sample-spring-rest?utm_source=github.com&utm_medium=referral&utm_content=wjfatuan/sample-spring-rest&utm_campaign=Badge_Grade_Dashboard)
+
 ## What you'll build
 
 You'll build a Spring application that let's you create and retrieve `Person` objects stored in a database using Spring Data REST. Spring Data REST takes the features of [Spring HATEOAS](http://projects.spring.io/spring-hateoas) and [Spring Data JPA](http://projects.spring.io/spring-data-jpa) and combines them together automatically.
