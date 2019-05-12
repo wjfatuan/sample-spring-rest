@@ -1,6 +1,7 @@
 ## What you'll build
 
-You'll build a Spring application that let's you create and retrieve `Person` objects stored in a database using Spring Data REST. Spring Data REST takes the features of http://projects.spring.io/spring-hateoas[Spring HATEOAS] and http://projects.spring.io/spring-data-jpa[Spring Data JPA] and combines them together automatically.
+
+You'll build a Spring application that let's you create and retrieve `Person` objects stored in a database using Spring Data REST. Spring Data REST takes the features of [Spring HATEOAS](http://projects.spring.io/spring-hateoas) and [Spring Data JPA](http://projects.spring.io/spring-data-jpa) and combines them together automatically.
 
 NOTE: Spring Data REST also supports link:/guides/gs/accessing-neo4j-data-rest[Spring Data Neo4j], link:/guides/gs/accessing-gemfire-data-rest[Spring Data Gemfire] and link:/guides/gs/accessing-mongodb-data-rest[Spring Data MongoDB] as backend data stores, but those are not part of this guide.
 
