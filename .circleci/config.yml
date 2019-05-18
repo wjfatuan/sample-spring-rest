@@ -3,6 +3,27 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
+
+orbs:
+  heroku: circleci/heroku@1.0.0
+  
+commands:
+  install:
+    steps:
+      - run:
+          name: "Install Heroku CLI, if necessary"
+          command: |
+            if [[ $(command -v heroku) == "" ]]; then
+              curl https://cli-assets.heroku.com/install.sh | sh
+            else
+              echo "Heroku is already installed. No operation was performed."
+            fi
+
+workflows:
+  heroku_deploy:
+    jobs:
+      - heroku/deploy-via-git
+      
 jobs:
   build:
     docker:
@@ -14,7 +35,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       - image: circleci/postgres:9.4
 
-    working_directory: ~/repo
+    working_directory: ~/sample-spring-rest
 
     environment:
       # Customize the JVM maximum heap limit
@@ -37,5 +58,8 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
+      # package into a jar
+      - run: mvn clean package
+      
       # run tests!
       - run: mvn test
