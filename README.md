@@ -1,7 +1,7 @@
 # Sample RESTful API with Spring 
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/22cb690e8826461ebd10c3adb82a50c2)](https://app.codacy.com/app/wilson.forero/sample-spring-rest?utm_source=github.com&utm_medium=referral&utm_content=wjfatuan/sample-spring-rest&utm_campaign=Badge_Grade_Dashboard)
-[![CircleCI](https://circleci.com/gh/wjfatuan/sample-spring-rest.svg?style=svg)](https://circleci.com/gh/wjfatuan/sample-spring-rest)
+[![CircleCI](https://circleci.com/gh/wjfatuan/sample-spring-rest.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/wjfatuan/sample-spring-rest)
 
 ## What you'll build
 
